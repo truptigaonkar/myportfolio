@@ -1,5 +1,5 @@
-import { styled } from '@glitz/react';
 import React from 'react';
+import { H1 } from './Reused/Generic';
 
 function App() {
   return (
@@ -10,7 +10,3 @@ function App() {
 }
 
 export default App;
-
-const H1 = styled.h1({
-  color: 'red',
-});
