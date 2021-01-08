@@ -1,52 +1,126 @@
 import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-scroll';
+import { styled } from '@glitz/react';
+import { H2, P, Ul } from '../Reused/Generic';
+import { pseudo } from '@glitz/core';
 
 const Navbar = () => {
     return (
         <>
-            <header id="header">
-                <div className="logo"><Link activeClass="active" to="home" spy={true} smooth={true} duration={100}>VIKRANT GAONKAR</Link></div>
-                <ul>
-                    <li><Link activeClass="active" to="home" spy={true} smooth={true} duration={100}>Home</Link></li>
-                    <li><Link activeClass="active" to="about" spy={true} smooth={true} duration={100}>About</Link></li>
-                    <li><Link activeClass="active" to="services" spy={true} smooth={true} duration={100}>Services</Link></li>
-                    <li><Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={100}>Portfolio</Link></li>
-                    <li><Link activeClass="active" to="team" spy={true} smooth={true} duration={100}>Team</Link></li>
-                    <li><Link activeClass="active" to="contact" spy={true} smooth={true} duration={100}>Contact</Link></li>
-                </ul>
-                <div className="toggle"></div>
-            </header>
-            <section id="home">
-                <h2>Responsive website design</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</p>
-                <Link activeClass="active" to="about" spy={true} smooth={true} duration={100}>Read More</Link>
-            </section>
-            <section id="about">
+            <Header>
+                <Logo><LinkA href="home">Logo</LinkA></Logo>
+                <Ulnew>
+                    <Li><LinkA href="#home">Home</LinkA></Li>
+                    <Li><LinkA href="#about">About</LinkA></Li>
+                    <Li><LinkA href="#services">Services</LinkA></Li>
+                    <Li><LinkA href="#portfolio">Portfolio</LinkA></Li>
+                    <Li><LinkA href="#team">Team</LinkA></Li>
+                    <Li><LinkA href="#contact">Contact</LinkA></Li>
+                </Ulnew>
+            </Header>
+            <Section id="home">
+                <H2new>Responsive website design</H2new>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+                <LinkA href="about">Read More</LinkA>
+            </Section>
+            <Section id="about">
                 <div>
-                <h2>About</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</p>
+                    <H2new>About</H2new>
+                    <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
                 </div>
                 <img src="../images/myphoto.JPG" alt="" />
-            </section>
-            <section id="services">
-                <h2>Our Services</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</p>
-            </section>
-            <section id="portfolio">
-                <h2>Portfolio</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</p>
-            </section>
-            <section id="team">
-                <h2>Our Team</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</p>
-            </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</p>
-            </section>
+            </Section>
+            <Section id="services">
+                <H2new>Our Services</H2new>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+            </Section>
+            <Section id="portfolio">
+                <H2new>Portfolio</H2new>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+            </Section>
+            <Section id="team">
+                <H2new>Our Team</H2new>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+            </Section>
+            <Section id="contact">
+                <H2new>Contact Us</H2new>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+            </Section>
         </>
     )
 }
 
 export default Navbar
+
+const Header = styled.header({
+    position: 'fixed',
+    width: '100%',
+    height: '60px',
+    padding: {
+        x: '100px',
+        y: 0,
+    },
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#111',
+    zIndex: 1000,
+})
+
+const Logo = styled.div({
+    backgroundColor: '#205aff',
+    fontSize: '20px',
+    textDecoration: 'none',
+    letterSpacing: '2px',
+    fontWeight: 700,
+    cursor: 'pointer',
+})
+
+const Ulnew = styled(Ul, {
+    position: 'relative',
+    display: 'flex',
+})
+
+const Li = styled.li({
+    position: 'relative',
+    listStyle: 'none',
+})
+
+const LinkA = styled.a({
+    position: 'relative',
+    padding: {
+        x: '10px',
+        y: '5px',
+    },
+    color: '#fff',
+    display: 'inline-block',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    ':hover': {
+        color: '#205aff',
+    },
+})
+
+const Section = styled.section({
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
+    padding: {
+        x: '200px',
+        y: '200px',
+    },
+    ...pseudo(':nth-child(even)', 
+    {
+        position: 'relative',
+        justifyContent: 'center',
+        alignItems: 'center',
+    backgroundColor: '#111',
+    color: '#fff',
+    }),
+})
+
+const H2new = styled(H2, {
+    textTransform: 'uppercase',
+})
