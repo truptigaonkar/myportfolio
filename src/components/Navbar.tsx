@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <>
             <Header>
-                <Logo><LinkA href="home">Logo</LinkA></Logo>
+                <Logo><LinkA href="home">John Doe</LinkA></Logo>
                 <Ulnew>
                     <Li><LinkA href="#home">Home</LinkA></Li>
                     <Li><LinkA href="#about">About</LinkA></Li>
@@ -84,6 +84,7 @@ const Li = styled.li({
 
 const LinkA = styled.a({
     position: 'relative',
+    textTransform: 'uppercase',
     padding: {
         x: '10px',
         y: '5px',
