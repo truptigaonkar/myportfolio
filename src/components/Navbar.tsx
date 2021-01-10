@@ -4,6 +4,7 @@ import { H2, P, Ul } from '../Reused/Generic';
 import { pseudo } from '@glitz/core';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
+import ExperienceSection from './ExperienceSection';
 
 const Navbar = () => {
     return (
@@ -22,8 +23,7 @@ const Navbar = () => {
             <Hero id="home"><HeroSection /></Hero>
             <Section id="about"><AboutSection /></Section>
             <Section id="experience">
-                <H2new>Experience</H2new>
-                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+                <ExperienceSection />
             </Section>
             <Section id="technologies">
                 <H2new>Technologies</H2new>
