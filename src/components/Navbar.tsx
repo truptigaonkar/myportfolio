@@ -1,14 +1,15 @@
 import React from 'react'
 import { styled } from '@glitz/react';
-import { H2, P, Ul } from '../Reused/Generic';
+import { Ul } from '../Reused/Generic';
 import { pseudo } from '@glitz/core';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
+import TechnologiesSection from './TechnologiesSection';
 
 const Navbar = () => {
     return (
-        <>
+        <div>
             <Header>
                 <Logo><LinkA href="home">John Doe</LinkA></Logo>
                 <Ulnew>
@@ -23,21 +24,32 @@ const Navbar = () => {
             <Hero id="home"><HeroSection /></Hero>
             <Section id="about"><AboutSection /></Section>
             <Section id="experience">
+                <Title>
+                    <H2>Experience</H2><br />
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                </Title>
                 <ExperienceSection />
             </Section>
             <Section id="technologies">
-                <H2new>Technologies</H2new>
-                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+                <Title>
+                    <H2>Technologies</H2><br />
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                </Title>
+                <TechnologiesSection />
             </Section>
             <Section id="assignments">
-                <H2new>Assignments</H2new>
-                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+                <Title>
+                    <H2>Assignments</H2><br />
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                </Title>
             </Section>
             <Section id="contact">
-                <H2new>Contact Us</H2new>
-                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
+                <Title>
+                    <H2>Contact Us</H2><br />
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                </Title>
             </Section>
-        </>
+        </div>
     )
 }
 
@@ -128,6 +140,31 @@ const Section = styled.section({
         }),
 })
 
-const H2new = styled(H2, {
-    textTransform: 'uppercase',
+const Title = styled.div({
+    width: '100%',
+    textAlign: 'center',
+    marginTop: '-100px',
+    marginBottom: '20px',
+})
+
+const H2 = styled.h2({
+    position: 'relative',
+    fontSize: '1.8em',
+    fontWeight: 700,
+    letterSpacing: '1px',
+    ':before':{
+        content: '""',
+        position: 'absolute',
+        left: '50%',
+        transform: 'translate(-50%)',
+        bottom: '-10px',
+        width: '60px',
+        height: '4px',
+        backgroundColor: '#00bcd4',
+    }
+})
+
+const P = styled.p({
+    maxWidth: '700px',
+    display: 'inline-block',
 })
