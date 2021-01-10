@@ -1,47 +1,66 @@
+import { styled } from '@glitz/react'
 import React from 'react'
-import image1 from '../images/technologi1.png'
-import image2 from '../images/technologi2.png'
-import image3 from '../images/technologi3.png'
-import image4 from '../images/technologi4.png'
-import image5 from '../images/technologi5.png'
-import image6 from '../images/technologi6.png'
-import './index.css'
+import { Technology } from './Data/TechnologyData'
 
 const TechnologiesSection = () => {
     return (
-        <div className="content">
-            <div className="servicesBx">
-                <img src={image1} alt=""/>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </div>
-            <div className="servicesBx">
-                <img src={image2} alt=""/>
-                <h2>Web Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta similique quas beatae officiis nam doloribus non nemo quae cumque, voluptatem officia molestiae? </p>
-            </div>
-            <div className="servicesBx">
-                <img src={image3} alt=""/>
-                <h2>Android Apps</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta similique quas beatae officiis nam doloribus non nemo quae cumque, </p>
-            </div>
-            <div className="servicesBx">
-                <img src={image4} alt=""/>
-                <h2>Photography</h2>
-                <p>Aliquid assumenda iure sit ab dolores odio quod!</p>
-            </div>
-            <div className="servicesBx">
-                <img src={image5} alt=""/>
-                <h2>Content Writing</h2>
-                <p>Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-            <div className="servicesBx">
-                <img src={image6} alt=""/>
-                <h2>Video Editing</h2>
-                <p>voluptatem officia molestiae? Aliquid assumenda iure sit ab dolores odio quod!</p>
-            </div>
-        </div>
+        <Content>
+            {Technology.technologyData.map(data => (
+                <ServicesBx>
+                    <TechnologyImg src={data.img} alt="" />
+                    <H2>{data.heading}</H2>
+                    <P>{data.content}</P>
+                </ServicesBx>
+            ))}
+        </Content>
     )
 }
 
 export default TechnologiesSection
+
+const Content = styled.div({
+    maxWidth: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+})
+
+const ServicesBx = styled.div({
+    padding: {
+        x: '10px',
+        y: '20px',
+    },
+    maxWidth: '250px',
+    margin: {
+        x: '20px',
+        y: '20px',
+    },
+    transitionProperty: '0.5s',
+    textAlign: 'center',
+    backgroundColor: '#f5f5f5',
+    ':hover': {
+        filter: 'invert(1)',
+    },
+})
+
+const TechnologyImg = styled.img({
+    maxWidth: '80px',
+    transitionProperty: '0.5s',
+})
+
+const H2 = styled.h2({
+    marginTop: '20px',
+    marginBottom: '10px',
+    fontSize: '20px',
+    fontWeight: 600,
+    transitionProperty: '0.5s',
+})
+
+const P = styled.p({
+    margin: {
+        x: 0,
+        y: 0,
+    },
+    transitionProperty: '0.5s',
+})
