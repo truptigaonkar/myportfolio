@@ -13,24 +13,24 @@ const Navbar = () => {
                 <Ulnew>
                     <Li><LinkA href="#home">Home</LinkA></Li>
                     <Li><LinkA href="#about">About</LinkA></Li>
-                    <Li><LinkA href="#services">Services</LinkA></Li>
-                    <Li><LinkA href="#portfolio">Portfolio</LinkA></Li>
-                    <Li><LinkA href="#team">Team</LinkA></Li>
+                    <Li><LinkA href="#experience">Experience</LinkA></Li>
+                    <Li><LinkA href="#technologies">Technologies</LinkA></Li>
+                    <Li><LinkA href="#assignments">Assignments</LinkA></Li>
                     <Li><LinkA href="#contact">Contact</LinkA></Li>
                 </Ulnew>
             </Header>
             <Hero id="home"><HeroSection /></Hero>
             <Section id="about"><AboutSection /></Section>
-            <Section id="services">
-                <H2new>Our Services</H2new>
+            <Section id="experience">
+                <H2new>Experience</H2new>
                 <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
             </Section>
-            <Section id="portfolio">
-                <H2new>Portfolio</H2new>
+            <Section id="technologies">
+                <H2new>Technologies</H2new>
                 <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
             </Section>
-            <Section id="team">
-                <H2new>Our Team</H2new>
+            <Section id="assignments">
+                <H2new>Assignments</H2new>
                 <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cupiditate aspernatur quis esse quam nihil facilis reprehenderit, ratione omnis dolores nemo, ipsum exercitationem porro deleniti! Voluptas sit molestias rerum exercitationem.</P>
             </Section>
             <Section id="contact">
