@@ -13,29 +13,33 @@ const HeroSection = () => {
             <Banner1>
                 <CarouselImg src={image1} alt="image1" />
                 <Textbox1>
-                    <H1>Heading 1</H1>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</P>
+                    <H1new>Heading 1</H1new>
+                    <Span></Span>
+                    <Pnew>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</Pnew>
                 </Textbox1>
             </Banner1>
             <Banner2>
                 <CarouselImg src={image2} alt="image2" />
                 <Textbox2>
-                    <H1>Heading 2</H1>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</P>
+                    <H1new>Heading 2</H1new>
+                    <Span></Span>
+                    <Pnew>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</Pnew>
                 </Textbox2>
             </Banner2>
             <Banner3>
                 <CarouselImg src={image3} alt="image3" />
                 <Textbox3>
-                    <H1>Heading 3</H1>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</P>
+                    <H1new>Heading 3</H1new>
+                    <Span></Span>
+                    <Pnew>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</Pnew>
                 </Textbox3>
             </Banner3>
             <Banner4>
                 <CarouselImg src={image4} alt="image4" />
                 <Textbox4>
-                    <H1>Heading 4</H1>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</P>
+                    <H1new>Heading 4</H1new>
+                    <Span></Span>
+                    <Pnew>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tenetur soluta. Aperiam eius sint cumque tempore earum sequi laudantium magnam, illo id accusamus harum, consectetur accusantium tempora blanditiis. Perferendis, et?</Pnew>
                 </Textbox4>
             </Banner4>
         </>
@@ -54,6 +58,7 @@ const Banner = styled.div({
     animationDuration: '12s',
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
+    backgroundColor: 'rgba(0,0,0,0.5)'
 })
 
 const Banner1 = styled(Banner, {
@@ -141,4 +146,22 @@ const Textbox3 = styled(Textbox, {
 
 const Textbox4 = styled(Textbox, {
     animationDelay: '9s',
+})
+
+const H1new = styled(H1, {
+  marginBottom: '30px',
+})
+
+const Pnew = styled(P, {
+    marginTop: '60px',
+    lineHeight: '18px',
+    fontSize: '14px',
+})
+
+const Span = styled.span({
+    height: '1px',
+    width: '100px',
+    position: 'absolute',
+    backgroundColor: 'red',
+    left: 0,
 })
