@@ -1,7 +1,7 @@
 import React from 'react'
 import { Experience } from "./Data/ExperienceData";
 import { styled } from '@glitz/react';
-import { pseudo } from '@glitz/core';
+import { media, pseudo } from '@glitz/core';
 
 const ExperienceSection = () => {
     return (
@@ -29,6 +29,13 @@ const Timeline = styled.div({
         x: 'auto',
         y: '10px',
     },
+    ...media('(max-width: 960px)',{
+        zoom: '55%',
+        padding: {
+            x: '5px',
+            y: '5px',
+        },
+    }),
 })
 
 const Ul = styled.ul({
@@ -42,7 +49,8 @@ const Ul = styled.ul({
         left:'50%',
         top:0,
         backgroundColor: '#fff',
-    }
+    },
+    
 })
 
 const Li = styled.li({
@@ -68,6 +76,14 @@ const Li = styled.li({
         justifyContent: 'flex-end',
         textAlign:'left',
     }),
+    ...media('(max-width: 960px)',{
+        ...pseudo(':nth-child(even)',
+            {
+                display: 'flex',
+                justifyContent: 'flex-start',
+                textAlign: 'left',
+            }),
+    }),
 })
 
 const TimelineContent = styled.div({
@@ -86,6 +102,13 @@ const TimelineContent = styled.div({
             color: '#00bcd4',
         }
     },
+    ...media('(max-width: 960px)',{
+        fontSize: '0.8em',
+        padding: {
+            x: 5,
+            y: 5,
+        },
+    }),
 })
 
 const Span = styled.span({
@@ -102,4 +125,7 @@ const H4 = styled.h4({
     },
     textTransform:'capitalize',
     fontSize:'25px',
+    ...media('(max-width: 960px)',{
+        fontSize: '15px',
+    }),
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@glitz/react';
 import { Ul } from '../Reused/Generic';
-import { pseudo } from '@glitz/core';
+import { media, pseudo } from '@glitz/core';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
@@ -125,10 +125,6 @@ const Section = styled.section({
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
-    padding: {
-        x: '200px',
-        y: '200px',
-    },
     ...pseudo(':nth-child(even)',
         {
             position: 'relative',
@@ -142,8 +138,13 @@ const Section = styled.section({
 const Title = styled.div({
     width: '100%',
     textAlign: 'center',
-    marginTop: '-100px',
-    marginBottom: '20px',
+    ...media('(max-width: 960px)',{
+        fontSize: '10px',
+        padding: {
+            x: '10px',
+            y: '10px',
+        },
+    }),
 })
 
 const H2 = styled.h2({
