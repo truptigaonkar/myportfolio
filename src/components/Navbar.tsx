@@ -6,19 +6,20 @@ import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
 import TechnologiesSection from './TechnologiesSection';
+import { Link as LinkScroll } from "react-scroll";
 
 const Navbar = () => {
     return (
         <div>
             <Header>
-                <Logo><LinkA href="home">John Doe</LinkA></Logo>
+                <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100}>John Doe</LinkScroll></Logo>
                 <Ulnew>
-                    <Li><LinkA href="#home">Home</LinkA></Li>
-                    <Li><LinkA href="#about">About</LinkA></Li>
-                    <Li><LinkA href="#experience">Experience</LinkA></Li>
-                    <Li><LinkA href="#technologies">Technologies</LinkA></Li>
-                    <Li><LinkA href="#assignments">Assignments</LinkA></Li>
-                    <Li><LinkA href="#contact">Contact</LinkA></Li>
+                    <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100}>Home</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100}>About</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="experience" spy={true} smooth={true} duration={100}>Experience</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="technologies" spy={true} smooth={true} duration={100}>Technologies</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="assignments" spy={true} smooth={true} duration={100}>Assignments</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="contact" spy={true} smooth={true} duration={100}>Contact</LinkScroll></Li>
                 </Ulnew>
             </Header>
             <Hero id="home"><HeroSection /></Hero>
@@ -72,12 +73,16 @@ const Header = styled.header({
 })
 
 const Logo = styled.div({
-    backgroundColor: '#00bcd4',
+    color: '#00bcd4',
     fontSize: '20px',
     textDecoration: 'none',
     letterSpacing: '2px',
     fontWeight: 700,
     cursor: 'pointer',
+    padding: {
+        x: '10px',
+        y: '5px',
+    },
 })
 
 const Ulnew = styled(Ul, {
@@ -88,19 +93,13 @@ const Ulnew = styled(Ul, {
 const Li = styled.li({
     position: 'relative',
     listStyle: 'none',
-})
-
-const LinkA = styled.a({
-    position: 'relative',
+    cursor: 'pointer',
+    color: '#fff',
     textTransform: 'uppercase',
     padding: {
         x: '10px',
         y: '5px',
     },
-    color: '#fff',
-    display: 'inline-block',
-    textDecoration: 'none',
-    cursor: 'pointer',
     ':hover': {
         color: '#00bcd4',
     },
