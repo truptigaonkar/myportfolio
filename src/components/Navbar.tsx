@@ -71,12 +71,11 @@ const Header = styled.header({
     justifyContent: 'space-between',
     alignItems: 'center',
     zIndex: 1000,
-    ...media('(max-width: 960px)',{
-        display: 'flex',
-        flexDirection: 'column',
+    transitionProperty: '0.5s',
+    ...media('(max-width: 991px)',{
         padding: {
-            x: 0,
-            y: 0,
+            x: '50px',
+            y: '20px',
         },
     }),
 })
