@@ -6,6 +6,7 @@ import image3 from '../images/image3.jpg'
 import image4 from '../images/image4.jpg'
 import H1 from '../Reused/Generic/H1'
 import P from '../Reused/Generic/P'
+import { media } from '@glitz/core'
 
 const HeroSection = () => {
     return (
@@ -114,6 +115,9 @@ const CarouselImg = styled.img({
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
     backgroundColor: 'linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%)',
+    ...media('(max-width: 960px)',{
+        height: '100%',
+    }),
 })
 
 const Textbox = styled.div({

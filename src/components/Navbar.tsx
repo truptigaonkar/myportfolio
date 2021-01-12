@@ -50,6 +50,9 @@ const Navbar = () => {
                     <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
                 </Title>
             </Section>
+            <Copyright>
+                <CopyrightP>Copyright ©2021 JOHN DOE. All Rights Reserved.</CopyrightP>
+            </Copyright>
         </div>
     )
 }
@@ -70,6 +73,14 @@ const Header = styled.header({
     backgroundColor: '#111',
     zIndex: 1000,
     opacity: '0.7',
+    ...media('(max-width: 960px)',{
+        display: 'flex',
+        flexDirection: 'column',
+        padding: {
+            x: 0,
+            y: 0,
+        },
+    }),
 })
 
 const Logo = styled.div({
@@ -88,6 +99,10 @@ const Logo = styled.div({
 const Ulnew = styled(Ul, {
     position: 'relative',
     display: 'flex',
+    ...media('(max-width: 960px)',{
+        display: 'flex',
+        flexDirection: 'column',
+    }),
 })
 
 const Li = styled.li({
@@ -138,6 +153,7 @@ const Section = styled.section({
 const Title = styled.div({
     width: '100%',
     textAlign: 'center',
+    marginTop: '80px',
     ...media('(max-width: 960px)',{
         fontSize: '10px',
         padding: {
@@ -152,6 +168,7 @@ const H2 = styled.h2({
     fontSize: '1.8em',
     fontWeight: 700,
     letterSpacing: '1px',
+    color: '#fec503',    
     ':before':{
         content: '""',
         position: 'absolute',
@@ -167,4 +184,22 @@ const H2 = styled.h2({
 const P = styled.p({
     maxWidth: '700px',
     display: 'inline-block',
+})
+
+const Copyright = styled.div({
+    color: '#fff',
+    backgroundColor: '#111',
+    textAlign: 'center',
+    padding: {
+        x: '10px',
+        y: '10px',
+    },
+})
+
+const CopyrightP = styled.p({
+    margin: {
+        x: 0,
+        y: 0,
+    },
+    fontSize: '16px',
 })

@@ -7,6 +7,7 @@ import { styled } from '@glitz/react'
 import H4 from '../Reused/Generic/H4'
 import H3 from '../Reused/Generic/H3'
 import P from '../Reused/Generic/P'
+import { media } from '@glitz/core'
 
 const AboutSection = () => {
     return (
@@ -49,6 +50,9 @@ const AboutImg = styled.img({
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+    ...media('(max-width: 960px)',{
+        display: 'none',
+    }),
 })
 
 const AboutContent = styled.div({
@@ -63,6 +67,12 @@ const AboutContent = styled.div({
     padding: {
         xy: '100px',
     },
+    ...media('(max-width: 960px)',{
+        padding: {
+            xy: '25px',
+        },
+        width: '100%',
+    }),
 })
 
 const H4new = styled(H4, {
