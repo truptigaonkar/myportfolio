@@ -65,14 +65,12 @@ const Header = styled.header({
     height: '60px',
     padding: {
         x: '100px',
-        y: 0,
+        y: '40px',
     },
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#111',
     zIndex: 1000,
-    opacity: '0.7',
     ...media('(max-width: 960px)',{
         display: 'flex',
         flexDirection: 'column',
