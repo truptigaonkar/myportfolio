@@ -12,17 +12,19 @@ import {FaTimes, FaBars} from "react-icons/fa"
 const Navbar = () => {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
+    const closeMobileMenu = () => setClick(false);
+
     return (
         <div>
             <Header>
-                <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100}>John Doe</LinkScroll></Logo>
+                <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu}>John Doe</LinkScroll></Logo>
                 <Ulnew style={{transform: click ? 'translateX(0)' : ''}}>
-                    <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100}>Home</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100}>About</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="experience" spy={true} smooth={true} duration={100}>Experience</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="technologies" spy={true} smooth={true} duration={100}>Technologies</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="assignments" spy={true} smooth={true} duration={100}>Assignments</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="contact" spy={true} smooth={true} duration={100}>Contact</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Home</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>About</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="experience" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Experience</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="technologies" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Technologies</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="assignments" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Assignments</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="contact" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Contact</LinkScroll></Li>
                 </Ulnew>
                 <BurgerMenu onClick={handleClick}>{click ? <FaTimes /> : <FaBars />}</BurgerMenu>
             </Header>
@@ -103,16 +105,14 @@ const Ulnew = styled(Ul, {
     ...media('(max-width: 960px)',{
         position: 'absolute',
         display: 'block',
-        top: 0,
+        top: '60px',
         left: 0,
         height: '100vh',
-        backgroundColor: '#000',
-        padding:{
-            xy: '40px'
-        },
-        width: '50%',
-        transform: 'translateX(-500px)',
-        transitionProperty: '0.5s ease-in-out',
+        backgroundColor: '#242222',
+        width: '100%',
+        transform: 'translateX(-100%)',
+        transitionProperty: 'all 0.3s ease-in-out',
+        textAlign: 'center'
     }),
 })
 
@@ -122,17 +122,22 @@ const Li = styled.li({
     cursor: 'pointer',
     color: '#fff',
     textTransform: 'uppercase',
-    padding: {
-        x: '10px',
-        y: '5px',
-    },
+    padding: {x: '1rem',y: '.5rem',},
     ':hover': {
         color: '#00bcd4',
     },
     ...media('(max-width: 960px)',{
-        padding:{
-            xy: '25px'
-        }
+        textAlign: 'center',
+        padding: {
+            x: '2rem',
+            y: '2rem',
+        },
+        width: '100%',
+        ':hover': {
+            backgroundColor: '#fff',
+            color: '#242424',
+            borderRadius: 0,
+        },
     }),
 })
 
@@ -221,11 +226,15 @@ const CopyrightP = styled.p({
 })
 
 const BurgerMenu = styled.div({
-    fontSize: '25px',
-    color: '#fff',
     display: 'none',
-    cursor: 'pointer',
     ...media('(max-width: 960px)',{
-    display: 'block',
+        color: '#fff',
+        display: 'block',
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        transform: 'translate(-100%, 60%)',
+        fontSize: '1.8rem',
+        cursor: 'pointer',
     }),
 })
