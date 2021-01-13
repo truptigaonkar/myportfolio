@@ -147,10 +147,6 @@ const Hero = styled.section({
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
-    padding: {
-        x: '200px',
-        y: '200px',
-    },
 })
 
 const Section = styled.section({
