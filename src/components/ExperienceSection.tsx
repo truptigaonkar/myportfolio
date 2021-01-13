@@ -24,7 +24,6 @@ const ExperienceSection = () => {
 export default ExperienceSection
 
 const Timeline = styled.div({
-    //width:'1200px',
     margin: {
         x: 'auto',
         y: '10px',
@@ -34,7 +33,7 @@ const Timeline = styled.div({
         padding: {
             x: '5px',
             y: '5px',
-        },
+        },  
     }),
 })
 
@@ -50,7 +49,11 @@ const Ul = styled.ul({
         top:0,
         backgroundColor: '#fff',
     },
-    
+    ...media('(max-width: 960px)',{
+        ':before':{
+            width: 0,
+        },
+    }),
 })
 
 const Li = styled.li({
@@ -76,13 +79,16 @@ const Li = styled.li({
         justifyContent: 'flex-end',
         textAlign:'left',
     }),
-    ...media('(max-width: 960px)',{
+    ...media('(max-width: 960px)', {
         ...pseudo(':nth-child(even)',
             {
                 display: 'flex',
                 justifyContent: 'flex-start',
                 textAlign: 'left',
             }),
+        ':before': {
+            width: 0,
+        },
     }),
 })
 
@@ -108,6 +114,8 @@ const TimelineContent = styled.div({
             x: 5,
             y: 5,
         },
+        width: '100%',
+        textAlign: 'center',
     }),
 })
 
