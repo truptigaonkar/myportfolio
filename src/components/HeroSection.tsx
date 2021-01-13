@@ -59,7 +59,6 @@ const Banner = styled.div({
     animationDuration: '12s',
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
-    backgroundColor: 'rgba(0,0,0,0.5)'
 })
 
 const Banner1 = styled(Banner, {
@@ -114,7 +113,7 @@ const CarouselImg = styled.img({
     animationDuration: '10s',
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear',
-    backgroundColor: 'linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%)',
+    filter: 'brightness(30%)',
     ...media('(max-width: 960px)',{
         height: '100%',
     }),
@@ -163,9 +162,9 @@ const Pnew = styled(P, {
 })
 
 const Span = styled.span({
-    height: '1px',
+    height: '3px',
     width: '100px',
     position: 'absolute',
-    backgroundColor: 'red',
+    backgroundColor: '#00bcd4',
     left: 0,
 })

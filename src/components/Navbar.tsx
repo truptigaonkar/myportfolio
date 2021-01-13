@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@glitz/react';
 import { Ul } from '../Reused/Generic';
 import { media, pseudo } from '@glitz/core';
@@ -7,13 +7,16 @@ import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
 import TechnologiesSection from './TechnologiesSection';
 import { Link as LinkScroll } from "react-scroll";
+import {FaTimes, FaBars} from "react-icons/fa"
 
 const Navbar = () => {
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click)
     return (
         <div>
             <Header>
                 <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100}>John Doe</LinkScroll></Logo>
-                <Ulnew>
+                <Ulnew style={{transform: click ? 'translateX(0)' : ''}}>
                     <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100}>Home</LinkScroll></Li>
                     <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100}>About</LinkScroll></Li>
                     <Li><LinkScroll activeClass="active" to="experience" spy={true} smooth={true} duration={100}>Experience</LinkScroll></Li>
@@ -21,6 +24,7 @@ const Navbar = () => {
                     <Li><LinkScroll activeClass="active" to="assignments" spy={true} smooth={true} duration={100}>Assignments</LinkScroll></Li>
                     <Li><LinkScroll activeClass="active" to="contact" spy={true} smooth={true} duration={100}>Contact</LinkScroll></Li>
                 </Ulnew>
+                <BurgerMenu onClick={handleClick}>{click ? <FaTimes /> : <FaBars />}</BurgerMenu>
             </Header>
             <Hero id="home"><HeroSection /></Hero>
             <Section id="about"><AboutSection /></Section>
@@ -97,8 +101,18 @@ const Ulnew = styled(Ul, {
     position: 'relative',
     display: 'flex',
     ...media('(max-width: 960px)',{
-        display: 'flex',
-        flexDirection: 'column',
+        position: 'absolute',
+        display: 'block',
+        top: 0,
+        left: 0,
+        height: '100vh',
+        backgroundColor: '#000',
+        padding:{
+            xy: '40px'
+        },
+        width: '50%',
+        transform: 'translateX(-500px)',
+        transitionProperty: '0.5s ease-in-out',
     }),
 })
 
@@ -115,6 +129,11 @@ const Li = styled.li({
     ':hover': {
         color: '#00bcd4',
     },
+    ...media('(max-width: 960px)',{
+        padding:{
+            xy: '25px'
+        }
+    }),
 })
 
 const Hero = styled.section({
@@ -199,4 +218,14 @@ const CopyrightP = styled.p({
         y: 0,
     },
     fontSize: '16px',
+})
+
+const BurgerMenu = styled.div({
+    fontSize: '25px',
+    color: '#fff',
+    display: 'none',
+    cursor: 'pointer',
+    ...media('(max-width: 960px)',{
+    display: 'block',
+    }),
 })
