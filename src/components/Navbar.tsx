@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { styled } from '@glitz/react';
-import { Ul } from '../Reused/Generic';
 import { media, pseudo } from '@glitz/core';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
@@ -99,7 +98,7 @@ const Logo = styled.div({
     },
 })
 
-const Ulnew = styled(Ul, {
+const Ulnew = styled.ul({
     position: 'relative',
     display: 'flex',
     ...media('(max-width: 960px)',{

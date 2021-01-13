@@ -4,8 +4,6 @@ import image1 from '../images/image1.jpg'
 import image2 from '../images/image2.jpg'
 import image3 from '../images/image3.jpg'
 import image4 from '../images/image4.jpg'
-import H1 from '../Reused/Generic/H1'
-import P from '../Reused/Generic/P'
 import { media } from '@glitz/core'
 
 const HeroSection = () => {
@@ -151,11 +149,11 @@ const Textbox4 = styled(Textbox, {
     animationDelay: '9s',
 })
 
-const H1new = styled(H1, {
+const H1new = styled.h1({
   marginBottom: '30px',
 })
 
-const Pnew = styled(P, {
+const Pnew = styled.p({
     marginTop: '60px',
     lineHeight: '18px',
     fontSize: '14px',

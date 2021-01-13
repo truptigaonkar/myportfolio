@@ -4,9 +4,6 @@ import facebook from '../images/facebook.png'
 import twitter from '../images/twitter.png'
 import instagram from '../images/instagram.png'
 import { styled } from '@glitz/react'
-import H4 from '../Reused/Generic/H4'
-import H3 from '../Reused/Generic/H3'
-import P from '../Reused/Generic/P'
 import { media } from '@glitz/core'
 
 const AboutSection = () => {
@@ -75,7 +72,7 @@ const AboutContent = styled.div({
     }),
 })
 
-const H4new = styled(H4, {
+const H4new = styled.h3({
     fontSize: '1.5em',
     color: '#333',
     fontWeight: 300,
@@ -87,13 +84,13 @@ const Span = styled.span({
     fontWeight: 700,
 })
 
-const H3new = styled(H3, {
+const H3new = styled.h3({
     fontSize: '3em',
     color: '#333',
     lineHeight: '1em',
 })
 
-const Pnew = styled(P, {
+const Pnew = styled.p({
     fontSize: '1.1em',
     margin: {
         x: 0,
