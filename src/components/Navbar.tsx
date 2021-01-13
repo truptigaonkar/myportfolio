@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <div>
             <Header>
-                <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu}>John Doe</LinkScroll></Logo>
+                <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{borderBottom: 0}}>John Doe</LinkScroll></Logo>
                 <Ulnew style={{transform: click ? 'translateX(0)' : ''}}>
                     <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Home</LinkScroll></Li>
                     <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>About</LinkScroll></Li>
