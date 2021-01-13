@@ -24,13 +24,13 @@ const ExperienceSection = () => {
 export default ExperienceSection
 
 const Timeline = styled.div({
-    width:'1200px',
+    //width:'1200px',
     margin: {
         x: 'auto',
         y: '10px',
     },
     ...media('(max-width: 960px)',{
-        zoom: '55%',
+        // zoom: '55%',
         padding: {
             x: '5px',
             y: '5px',
