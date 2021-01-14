@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { styled } from '@glitz/react';
 import { media, pseudo } from '@glitz/core';
-import HeroSection from './HeroSection';
+// import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
 import TechnologiesSection from './TechnologiesSection';
 import { Link as LinkScroll } from "react-scroll";
 import {FaTimes, FaBars} from "react-icons/fa"
+import HeroVideoSection from './HeroVideoSection';
 
 const Navbar = () => {
     const [click, setClick] = useState(false)
@@ -27,7 +28,8 @@ const Navbar = () => {
                 </Ulnew>
                 <BurgerMenu onClick={handleClick}>{click ? <FaTimes /> : <FaBars />}</BurgerMenu>
             </Header>
-            <Hero id="home"><HeroSection /></Hero>
+            {/* <Hero id="home"><HeroSection /></Hero> */}
+           <div id="home"><HeroVideoSection /></div>
             <Section id="about"><AboutSection /></Section>
             <Section id="experience">
                 <Title>
@@ -121,7 +123,6 @@ const Li = styled.li({
     cursor: 'pointer',
     color: '#fff',
     textTransform: 'uppercase',
-    padding: {x: '1rem',y: '.5rem',},
     ':hover': {
         color: '#00bcd4',
     },
