@@ -1,9 +1,5 @@
 import React, {useState} from 'react'
-// import video from '../videos/datavideo.mp4'
-// import video from '../videos/datavideo1.mp4'
-import video from '../videos/datavideo2.mp4'
-// import video from '../videos/datavideo3.mp4'
-// import video from '../videos/datavideo4.mp4'
+import video from '../videos/datavideo.mp4'
 import { styled } from '@glitz/react';
 import { media } from '@glitz/core';
 import {MdArrowForward, MdKeyboardArrowRight} from 'react-icons/md'
@@ -19,9 +15,7 @@ const HeroVideoSection = () => {
             <HeroContent>
                 <HeroH1>Frontend Developer</HeroH1>
                 <HeroP>Lorem ipsum dolor sit amet consectetur adipisicing elit.</HeroP>
-                <HeroBtnWrappper>
-                    <button onMouseEnter={onHover} onMouseLeave={onHover}>Know Me{hover ? <ArrowForward /> : <ArrowRight />}</button>
-                </HeroBtnWrappper>
+                    <HeroBtnWrappper onMouseEnter={onHover} onMouseLeave={onHover}>Know Me{hover ? <ArrowForward /> : <ArrowRight />}</HeroBtnWrappper>
             </HeroContent>
         </HeroContainer>
     )
@@ -75,7 +69,7 @@ const HeroContent = styled.div({
     maxWidth: '1200px',
     position: 'absolute',
     padding: {
-        x: '24pxpx',
+        x: '24px',
         y: '8px',
     },
     display: 'flex',
@@ -84,7 +78,7 @@ const HeroContent = styled.div({
 })
 
 const HeroH1 = styled.h1({
-    color: '#fff',
+    color: '#00bcd4',
     fontSize: '48px',
     textAlign: 'center',
     ...media('(max-width: 768px)',{
@@ -111,9 +105,16 @@ const HeroP = styled.p({
 
 const HeroBtnWrappper = styled.div({
     marginTop: '32px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    backgroundColor: '#00bcd4',
+    padding: {
+        x: '24px',
+        y: '8px',
+    },
+    cursor: 'pointer',
+    borderRadius: '20px',
+    ':hover':{
+        backgroundColor: '#fff',
+    }
 })
 
 const ArrowForward = styled(MdArrowForward, {

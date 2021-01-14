@@ -29,7 +29,6 @@ const Timeline = styled.div({
         y: '10px',
     },
     ...media('(max-width: 960px)',{
-        // zoom: '55%',
         padding: {
             x: '5px',
             y: '5px',

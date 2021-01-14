@@ -88,7 +88,7 @@ const Header = styled.header({
 })
 
 const Logo = styled.div({
-    color: '#00bcd4',
+    color: '#fff',
     fontSize: '20px',
     textDecoration: 'none',
     letterSpacing: '2px',
@@ -123,9 +123,6 @@ const Li = styled.li({
     cursor: 'pointer',
     color: '#fff',
     textTransform: 'uppercase',
-    ':hover': {
-        color: '#00bcd4',
-    },
     ...media('(max-width: 960px)',{
         textAlign: 'center',
         padding: {
@@ -185,7 +182,6 @@ const H2 = styled.h2({
     fontSize: '1.8em',
     fontWeight: 700,
     letterSpacing: '1px',
-    color: '#fec503',    
     ':before':{
         content: '""',
         position: 'absolute',
