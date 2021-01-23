@@ -36,7 +36,7 @@ const ImgSidebar = styled.div({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '300px',
+    width: '380px',
     height: '100%',
 })
 
@@ -56,7 +56,7 @@ const AboutContent = styled.div({
     position: 'absolute',
     top: 0,
     right: 0,
-    width: 'calc(100% - 300px)',
+    width: 'calc(100% - 500px)',
     height: '100%',
     display: 'flex',
     justifyContent: 'center',
