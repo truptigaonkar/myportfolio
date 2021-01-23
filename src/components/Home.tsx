@@ -8,8 +8,9 @@ import TechnologiesSection from './TechnologiesSection';
 import { Link as LinkScroll } from "react-scroll";
 import {FaTimes, FaBars} from "react-icons/fa"
 import HeroVideoSection from './HeroVideoSection';
+import Footer from './Footer';
 
-const Navbar = () => {
+const Home = () => {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false);
@@ -57,14 +58,12 @@ const Navbar = () => {
                     <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
                 </Title>
             </Section>
-            <Copyright>
-                <CopyrightP>Copyright ©2021 JOHN DOE. All Rights Reserved.</CopyrightP>
-            </Copyright>
+            <Footer />
         </div>
     )
 }
 
-export default Navbar
+export default Home
 
 const Header = styled.header({
     position: 'fixed',
@@ -197,24 +196,6 @@ const H2 = styled.h2({
 const P = styled.p({
     maxWidth: '700px',
     display: 'inline-block',
-})
-
-const Copyright = styled.div({
-    color: '#fff',
-    backgroundColor: '#111',
-    textAlign: 'center',
-    padding: {
-        x: '10px',
-        y: '10px',
-    },
-})
-
-const CopyrightP = styled.p({
-    margin: {
-        x: 0,
-        y: 0,
-    },
-    fontSize: '16px',
 })
 
 const BurgerMenu = styled.div({
