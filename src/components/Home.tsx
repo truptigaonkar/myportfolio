@@ -8,7 +8,7 @@ import TechnologiesSection from './TechnologiesSection';
 import { Link as LinkScroll } from "react-scroll";
 import {FaTimes, FaBars} from "react-icons/fa"
 import HeroVideoSection from './HeroVideoSection';
-import Footer from './Footer';
+import Footer from './FooterSection';
 
 const Home = () => {
     const [click, setClick] = useState(false)
