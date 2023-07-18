@@ -9,6 +9,7 @@ import { Link as LinkScroll } from "react-scroll";
 import {FaTimes, FaBars} from "react-icons/fa"
 import HeroVideoSection from './HeroVideoSection';
 import Footer from './FooterSection';
+import { ContactSection } from './ContactSection';
 
 const Home = () => {
     const [click, setClick] = useState(false)
@@ -55,7 +56,7 @@ const Home = () => {
             <Section id="contact">
                 <Title>
                     <H2>Contact Us</H2><br />
-                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                    <ContactSection />
                 </Title>
             </Section>
             <Footer />
