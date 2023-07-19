@@ -55,7 +55,8 @@ const Home = () => {
             </Section>
             <Section id="contact">
                 <Title>
-                    <H2>Contact Us</H2><br />
+                    <H2>Get in touch</H2><br />
+                    <P>Send me a message.</P>
                     <ContactSection />
                 </Title>
             </Section>

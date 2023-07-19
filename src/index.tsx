@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import { GlitzClient } from '@glitz/core';
