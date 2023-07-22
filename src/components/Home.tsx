@@ -15,13 +15,32 @@ const Home = () => {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false);
+    const [color, setColor] = useState(false);
+    const changeColor = () =>{
+        if(window.scrollY >= 60){
+            setColor(true)
+        }else{
+            setColor(false)
+        }
+    }
+    window.addEventListener('scroll', changeColor)
 
     return (
         <div>
-            <Header>
+            <Header css={color ? { backgroundColor: '#00bcd4', 
+             padding: {
+                x: '100px',
+                y: '25px',
+            },
+        boxShadow: '0 5px 20px rgba(0,0,0,0.1)'
+        }: {backgroundColor: 'transparent', padding: {
+            x: '100px',
+            y: '25px',
+        },}}>
                 <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{borderBottom: 0}}>John Doe</LinkScroll></Logo>
                 <Ulnew style={{transform: click ? 'translateX(0)' : ''}}>
-                    <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Home</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem', textDecoration: 'none',
+}}>Home</LinkScroll></Li>
                     <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>About</LinkScroll></Li>
                     <Li><LinkScroll activeClass="active" to="experience" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Experience</LinkScroll></Li>
                     <Li><LinkScroll activeClass="active" to="technologies" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Technologies</LinkScroll></Li>
@@ -104,6 +123,7 @@ const Logo = styled.div({
 const Ulnew = styled.ul({
     position: 'relative',
     display: 'flex',
+    marginBottom: 0,
     ...media('(max-width: 960px)',{
         position: 'absolute',
         display: 'block',
