@@ -37,15 +37,15 @@ const Home = () => {
             x: '100px',
             y: '25px',
         },}}>
-                <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{borderBottom: 0}}>John Doe</LinkScroll></Logo>
+                <Logo><LinkScroll to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{borderBottom: 0}}>Trupti Gaonkar</LinkScroll></Logo>
                 <Ulnew style={{transform: click ? 'translateX(0)' : ''}}>
                     <Li><LinkScroll activeClass="active" to="home" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem', textDecoration: 'none',
 }}>Home</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>About</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="experience" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Experience</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="technologies" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Technologies</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="assignments" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Assignments</LinkScroll></Li>
-                    <Li><LinkScroll activeClass="active" to="contact" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem'}}>Contact</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="about" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem' , textDecoration: 'none',}}>About</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="experience" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem' , textDecoration: 'none',}}>Experience</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="technologies" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem' , textDecoration: 'none',}}>Technologies</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="assignments" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem' , textDecoration: 'none',}}>Assignments</LinkScroll></Li>
+                    <Li><LinkScroll activeClass="active" to="contact" spy={true} smooth={true} duration={100} onClick={closeMobileMenu} style={{ padding: '1rem 1rem' , textDecoration: 'none',}}>Contact</LinkScroll></Li>
                 </Ulnew>
                 <BurgerMenu onClick={handleClick}>{click ? <FaTimes /> : <FaBars />}</BurgerMenu>
             </Header>
